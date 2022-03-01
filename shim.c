@@ -268,7 +268,7 @@ exit:
     exit(exit_code);
 }
 
-static void run_slave(struct pt_info *pti, char *const command[]) {
+static void run_slave(struct pt_info *pti, char* command[]) {
     assert(pti != NULL);
     close(pti->master_fd);
     setsid();
@@ -362,7 +362,8 @@ int main(int argc, char *argv[]) {
         perror("fork() failed");
         exit(EXIT_FAILURE);
     } else if (pid == 0) {
-        run_slave(&pti, argv + 2);
+        char* command = strcat("docker attach ", *(argv + 2));
+        run_slave(&pti, &command);
     } else {
         run_master(&pti, argv[1]);
     }

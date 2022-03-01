@@ -36,11 +36,7 @@ func main() {
 	//
 
 	// Remove first two args
-	a := os.Args
-	a = append(a[:0], a[2:]...)
-
-	// Make sure message has a forward slash
-	cmd := "/" + strings.TrimPrefix(strings.Join(a, " "), "/")
+	cmd := strings.Join(append(os.Args[:0], os.Args[2:]...), " ")
 
 	arguments := os.Args
 	if len(arguments) == 1 {

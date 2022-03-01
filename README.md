@@ -39,11 +39,14 @@ CONTAINER="my_container"
 ## What? Why? Where?
 
 - What is this actually doing?
+
   The `shim` program keeps a PTY <sup>[def](https://en.wikipedia.org/wiki/Pseudoterminal)</sup> opened on a local TCP server. This is needed to use `docker attach` without directly accessing it, as `docker attach` does not provide an easy way to detach the TTY (they ask you to Ctrl+C to close the program or to provide a detach sequence).
   The `cmd` program actually interfaces with the local PTY to give it STDIO and receive STDOUT as needed.
 - Why would I use this? What is the advantage over [using an SQL client / other]?
+
   I did not intend for this to be a direct SQL interface, and it is quite versatile. The SQL examples are only there to get the concept across with a more familiar software for people.
 - Where else is this used?
+
   I currently use this to send commands to a VS Server running on [`vintagestory-docker`](https://github.com/l1ving/vintagestory-docker/). This use-case makes much more sense as VS requires you keep a TTY opened to send commands to it, and this is not ideal with Docker containers.
 
 ## TODO

@@ -40,7 +40,7 @@ CONTAINER="my_container"
 
 - What is this actually doing?
 
-  The `shim` program keeps a PTY <sup>[def](https://en.wikipedia.org/wiki/Pseudoterminal)</sup> opened on a local TCP server. This is needed to use `docker attach` without directly accessing it, as `docker attach` does not provide an easy way to detach the TTY (they ask you to Ctrl+C to close the program or to provide a detach sequence).
+  The `shim` program keeps a PTY <sup>[[def]](https://en.wikipedia.org/wiki/Pseudoterminal)</sup> opened on a local TCP server. This is needed to use `docker attach` without directly accessing it, as `docker attach` does not provide an easy way to detach the TTY (they ask you to Ctrl+C to close the program or to provide a detach sequence).
   The `cmd` program actually interfaces with the local PTY to give it STDIO and receive STDOUT as needed.
 - Why would I use this? What is the advantage over [using an SQL client / other]?
 

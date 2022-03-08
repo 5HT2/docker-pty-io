@@ -7,7 +7,7 @@ This is a command-line utility for interacting with Docker containers as termina
 A Makefile will be added shortly. For now, you can compile with the following commands.
 
 ```bash
-git clone https://github.com/l1ving/docker-pty-io
+git clone https://github.com/5HT2/docker-pty-io
 cd docker-pty-io
 
 # Build shim
@@ -47,7 +47,7 @@ CONTAINER="my_container"
   I did not intend for this to be a direct SQL interface, and it is quite versatile. The SQL examples are only there to get the concept across with a more familiar software for people.
 - Where else is this used?
 
-  I currently use this to send commands to a VS Server running on [`vintagestory-docker`](https://github.com/l1ving/vintagestory-docker/). This use-case makes much more sense as VS requires you keep a TTY opened to send commands to it, and this is not ideal with Docker containers.
+  I currently use this to send commands to a VS Server running on [`vintagestory-docker`](https://github.com/5HT2/vintagestory-docker/). This use-case makes much more sense as VS requires you keep a TTY opened to send commands to it, and this is not ideal with Docker containers.
 
 ## TODO
 
@@ -57,6 +57,6 @@ CONTAINER="my_container"
 
 ## License
 
-This project is licensed under [ISC](https://github.com/l1ving/docker-pty-io/blob/master/LICENSE.md) and applies to all files in the repository with the exception of `shim.c`.
+This project is licensed under [ISC](https://github.com/5HT2/docker-pty-io/blob/master/LICENSE.md) and applies to all files in the repository with the exception of `shim.c`.
 
 The `shim.c` file is taken from [`iximiuz/ptyme`](https://github.com/iximiuz/ptyme) as a basic PTY server example, and is lightly modified to fit the needs of this project. It is not under a license, and should the author request I use something else I am more than happy to do so.

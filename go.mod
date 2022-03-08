@@ -1,4 +1,4 @@
-module github.com/l1ving/docker-pty-io
+module github.com/5HT2/docker-pty-io
 
 go 1.17
 

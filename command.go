@@ -35,14 +35,15 @@ func main() {
 	// Setup args
 	//
 
-	// Remove first two args
-	cmd := strings.Join(append(os.Args[:0], os.Args[2:]...), " ")
-
-	arguments := os.Args
+	// Copy and check for a port
+	arguments := append([]string{}, os.Args...)
 	if len(arguments) == 1 {
 		fmt.Println("Please provide a port.")
 		return
 	}
+
+	// Remove first two args
+	cmd := strings.Join(append(os.Args[:0], os.Args[2:]...), " ")
 
 	//
 	// Setup TCP
